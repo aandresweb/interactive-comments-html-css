@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url("../assets/fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik-Bold";
+  src: url("../assets/fonts/Rubik-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Rubik-Medium";
+  src: url("../assets/fonts/Rubik-Medium.ttf");
+}
+
+:root {
+  /* Primary */
+  --moderate-blue: hsl(238, 40%, 52%);
+  --moderate-blue-hover: hsl(237, 35%, 36%);
+  --soft-red: hsl(358, 79%, 66%);
+  --light-grayish-blue: hsl(239, 57%, 85%);
+  --pale-red: hsl(357, 100%, 86%);
+
+  /* Neutral */
+  --dark-blue: hsl(212, 24%, 26%);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: hsl(223, 19%, 93%);
+  --very-light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --font-regular: "Rubik-Regular";
+  --font-bold: "Rubik-Bold";
+  --font-medium: "Rubik-Medium";
+}
+
+body {
+  background-color: var(--very-light-gray);
+  position: relative;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-regular);
+  list-style: none;
+}
+
+p {
+  line-height: 1.4rem;
+  color: var(--grayish-blue);
+}
+
+a {
+  text-decoration: none;
+  user-select: none;
+}
+
+.app {
+  padding: 48px 0;
+}
+
+.wrapper {
+  max-width: 840px;
+  margin: auto;
+}
+
+/************* COMMENTS ***************/
+
+.comment-aside {
+  margin-right: 24px;
+}
+.comment-wrapper {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+  -moz-box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+  box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+}
+
+.comment-main {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.comment-actions {
+  margin-left: auto;
+}
+
+.comment-content {
+  color: var(--grayish-blue);
+}
+
+.comment-date {
+  color: var(--grayish-blue);
+}
+
+.comment-replyingTo {
+  color: var(--moderate-blue);
+  font-family: var(--font-medium);
+}
+.comment-user-name {
+  color: #000000;
+  font-family: var(--font-medium);
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.comment-user-img {
+  max-width: 32px;
+  margin-right: 12px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.comment-reply-button {
+  display: flex;
+  align-items: center;
+}
+
+.comment-reply-button,
+.comment-edit-button,
+.comment-delete-button {
+  cursor: pointer;
+}
+
+.comment-reply-button-text,
+.comment-edit-button-text,
+.comment-delete-button-text {
+  font-family: var(--font-medium);
+  font-weight: 500;
+}
+
+.comment-edit-button-text,
+.comment-reply-button-text {
+  color: var(--moderate-blue);
+}
+
+.comment-delete-button-text {
+  color: var(--soft-red);
+}
+
+.comment-reply-button-icon,
+.comment-edit-button-icon,
+.comment-delete-button-icon {
+  margin-right: 8px;
+}
+
+/************* SCORE *****************/
+
+.score {
+  background-color: var(--very-light-gray);
+  border-radius: 12px;
+}
+
+.score-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-content {
+  color: var(--moderate-blue);
+  font-family: var(--font-medium);
+  padding: 4px;
+}
+
+.score-minus,
+.score-plus {
+  padding: 16px;
+  cursor: pointer;
+}
+
+.score-minus,
+.score-plus,
+.score-content {
+  display: grid;
+  place-content: center;
+  user-select: none;
+}
+
+.replies {
+  margin-left: 32px;
+  padding-left: 32px;
+  border-left: 2px solid var(--light-gray);
+}
+
+.user-badget {
+  color: #fff;
+  background-color: var(--moderate-blue);
+  font-size: 0.7rem;
+  padding: 4px 6px;
+  margin-right: 12px;
+  border-radius: 2px;
+}
+
+.comment-reply-form {
+  margin-bottom: 28px;
+}
+
+/************* COMMENT FORM  *****************/
+
+.comment-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  padding-bottom: 24px;
+  -webkit-box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+  -moz-box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+  box-shadow: 4px 6px 7px 0px rgba(199, 199, 199, 0.09);
+}
+
+.comment-form-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.comment-form-user-img {
+  max-width: 48px;
+}
+.comment-form-user-img img {
+  width: 100%;
+}
+
+.comment-form-input {
+  flex: 1;
+}
+.comment-form-input textarea {
+  resize: none;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border-color: var(--light-gray);
+  min-height: 100px;
+  transition: all 0.5s ease;
+}
+.comment-form-input textarea:focus {
+  border-color: #000000;
+}
+
+.comment-form-submit-button {
+  background-color: var(--moderate-blue);
+  color: #fff;
+  font-family: var(--font-regular);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+}
+
+.comment-form-submit-button:hover {
+  background-color: var(--moderate-blue-hover);
+}
+
+.comment-form-edit {
+  resize: none;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border-color: var(--light-gray);
+  min-height: 100px;
+}
+
+.comment-form-button {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 12px;
+}
+
+.comment-form-button button {
+  background-color: var(--moderate-blue);
+  color: #fff;
+  font-family: var(--font-regular);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+}
+
+/************* MODAL *****************/
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #00000052;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-main {
+  background-color: #fff;
+  max-width: 420px;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.modal-header {
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  color: var(--dark-blue);
+}
+
+.modal-content {
+  margin-bottom: 24px;
+}
+.modal-actions {
+  display: flex;
+  column-gap: 12px;
+}
+
+.modal-button {
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-family: var(--font-regular);
+  cursor: pointer;
+}
+
+.modal-button.primary {
+  background-color: var(--grayish-blue);
+}
+.modal-button.delete {
+  background-color: var(--soft-red);
+}
